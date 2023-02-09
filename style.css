@@ -1,0 +1,318 @@
+/*************************** root style ************************************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --bg: #222327;
+    --bgNav: #ffffffb4;
+}
+
+/****************************************************************************/
+/*************************** Global style ************************************/
+body {
+    /* background: linear-gradient(-45deg, #ee7752, #283c86, #23a6d5, #23d5ab); */
+    background: linear-gradient(-45deg, #28313B, #272525, #181620, #000000);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.body-dark-mode {
+    background: linear-gradient(-45deg, #28313B, #414141, #434343, #000000);
+
+}
+
+::selection {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+li {
+    list-style: none
+}
+
+a {
+    text-decoration: none
+}
+
+i {
+    font-weight: 900;
+}
+
+
+/*************************** menu style ************************************/
+:root {
+    --body-color: #E4E9F7;
+    --sidebar-color: #FFF;
+    --primary-color: #695CFE;
+    --primary-color-light: #F6F5FF;
+    --toggle-color: #DDD;
+    --text-color: #707070;
+}
+
+body.dark {
+    --body-color: #18191a;
+    --sidebar-color: #242526;
+    --primary-color: #3a3b3c;
+    --primary-color-light: #3a3b3c;
+    --toggle-color: #fff;
+    --text-color: #ccc;
+}
+
+/********************** Global Style ************************/
+
+
+
+
+
+/************************************************************/
+
+/********************** Sidebar Style ************************/
+nav {
+    padding: 10px 20px;
+}
+
+/************************************************************/
+
+/********************** Header Style ************************/
+header {
+    display: flex;
+    align-items: center;
+}
+
+header div:first-child {
+    transition: transform 1s ease;
+}
+
+.menu-logo {
+    font-size: 50px;
+    margin-right: 10px;
+}
+
+.menu-logo:hover {
+    transform: rotate(90deg);
+}
+
+header div:nth-child(2) span {
+    display: block
+}
+
+.name {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: antiquewhite;
+    background: var(--sidebar-color);
+    transition: var(--tran-05);
+    z-index: 100;
+}
+
+/************************************************************/
+/*************************** Score style ************************************/
+.score-board p {
+    border-bottom: 2px solid #23a6d5;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.score-board ul p span:last-child {
+    margin-right: 20px;
+}
+
+/****************************************************************************/
+
+
+/********************** Top Menu Style ************************/
+nav ul:first-child i {
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+nav ul:first-child a {
+    display: flex;
+    align-items: center;
+
+}
+
+/****************************************************************************/
+/*************************** menu style ************************************/
+.toggle-wild input {
+    width: 200px;
+    height: 200px;
+    /* opacity: 0; */
+}
+
+.menu ul li {
+    min-height: 50px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 5px;
+}
+
+.double p {
+    width: 500px;
+}
+
+select {
+    width: 100%;
+}
+
+#wild {
+    /* position: absolute; */
+    width: 30%;
+    height: 50%;
+    /* opacity: 0; */
+
+}
+
+nav * {
+    color: #7b2cbf;
+}
+
+a {
+    text-decoration: none;
+
+}
+
+a:hover {
+    color: #eb5e28;
+}
+
+/*****************************************************************************/
+/*************************** grids style ************************************/
+.grid-wrapper {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+
+}
+
+.grid {
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, .2);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100%;
+    aspect-ratio: 1/1;
+}
+
+.grid div {
+    border: 5px solid rgb(185, 185, 185, 0);
+    background-color: rgba(250, 235, 215, 0.247);
+    background-clip: padding-box;
+    width: 32%;
+    /*32*/
+    aspect-ratio: 1/1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.grid>div>div {
+    width: 32%;
+    aspect-ratio: 1/1;
+}
+
+.X {
+    background: no-repeat url("./images/x2_1.svg");
+    background-size: contain;
+    animation: gradient 1000ms ease-in-out 0ms forwards;
+    animation: dance 2s ease forwards;
+}
+
+.O {
+    background: no-repeat url("./images/O2_1.svg");
+    background-size: contain;
+    animation: dance 2s ease forwards;
+}
+
+.turnC {
+    background: no-repeat url("./images/bg.jpg");
+    background-size: cover;
+    animation: gradient 1000ms ease-in-out 0ms forwards;
+    animation: dance 2s ease forwards;
+}
+
+/*******************************************************************************/
+/*************************** message style ************************************/
+.message-board {
+    position: absolute;
+    width: 50%;
+    height: 30%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #23a6d5;
+    border: #695CFE 2px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    transition: opacity .5s ease;
+}
+
+.hidden {
+    opacity: 0;
+    z-index: -1;
+    transition: opacity .5s ease;
+}
+
+.message {
+    text-align: center;
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+
+/****************************************************************************/
+/*************************** keyframes  ************************************/
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 75% 25%;
+    }
+
+    50% {
+        background-position: 60% 60%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes dance {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 10;
+    }
+}
+
+/****************************************************************************/

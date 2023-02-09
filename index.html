@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins" rel="stylesheet">
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Tic Tac Toe Game Design new</title>
+</head>
+
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="menu-logo"><a href=""><i class='bx bx-menu'></i></a></div>
+            <div class="title">
+                <span class="name">Tic Tac Toe</span>
+                <span class="artist">By Ali</span>
+            </div>
+        </header>
+        <div class="score-board">
+            <ul>
+                <p><span>X:</span><span id="x-score">-</span></p>
+                <p><span>O:</span><span id="o-score">-</span></p>
+            </ul>
+        </div>
+        <div class="menu top">
+            <ul>
+                <li><a href="#" id="new-game"><i class='bx bx-shape-square'></i><span class="text">New Game</span></a>
+                </li>
+                <li><a href="" id="clear-score"><i class='bx bx-reset'></i><span class="text">Clear Scores</span></a>
+                </li>
+                <li class="double">
+                    <i class='bx bx-grid'></i>
+                    <span class="text">Game mode</span>
+                </li>
+                <li>
+                    <select id="game-mode">
+                        <option value="normal">Normal 3x3</option>
+                        <option value="ultimate">Ultimate 9x9</option>
+                    </select>
+                </li>
+                <li><i class='bx bx-user'></i><span class="text">Player mode</span></li>
+
+                <li><select id="player-mode">
+                        <option value="player-vs-player">Player vs Player</option>
+                        <option value="player-vs-CPU">Player vs Ai</option>
+                        <option value="CPU-vs-CPU">Ai vs Ai</option>
+                    </select></li>
+                <li><i class='bx bxs-cog'></i><span class="text">Difficulty</span></li>
+                <li><select id="diffculty-mode">
+                        <option value="stupid">Stupid</option>
+                        <option value="easy">Easy</option>
+                        <option value="hard">Hard</option>
+                    </select></li>
+                <li><a href=""> <input type="checkbox" name="wild" id="wild"><i class='bx bxs-magic-wand'></i> <span
+                            class="text wild">Wild Cards</span></a></li>
+                <li><a href="#" class="use-wild-card"><span id="x-wild" data-id="X">Player X wild cards:</span></a></li>
+                <li><a href="#" class="use-wild-card"><span id="o-wild" data-id="O">Player O wild cards:</span></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="grid-wrapper">
+        <div class="grid"></div>
+    </div>
+    <div class="message-board hidden">
+        <p class="message">you have won</p>
+    </div>
+</body>
+
+</html>
