@@ -247,23 +247,7 @@ function init() {
         else if (opponentChances[2].length > 0) {
             return weightElement(opponentChances[2])
         }
-        // if (chances[0].length !== 0) {
-        //     return chances[0][0][0]
-        // } else if (opponentChances[0].length !== 0) {
-        //     return opponentChances[0][0][0]
-        // }
-        // else if (chances[1].length !== 0) {
-        //     return chances[1][0][0]
-        // }
-        // else if (opponentChances[1].length !== 0) {
-        //     return opponentChances[1][0][0]
-        // }
-        // else if (chances[2].length !== 0) {
-        //     return chances[2][0][0]
-        // }
-        // else if (opponentChances[2].length !== 0) {
-        //     return opponentChances[2][0][0]
-        // }
+       
         function easyExtended(playerChoices, opponentChoices) {
             const array0 = []
             const array0125 = []
