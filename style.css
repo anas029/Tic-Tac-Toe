@@ -60,10 +60,6 @@ header div:first-child {
     margin-right: 10px;
 }
 
-.menu-logo:hover {
-    /* transform: rotate(90deg); */
-}
-
 header div:nth-child(2) span {
     display: block
 }
