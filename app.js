@@ -1,6 +1,7 @@
 function init() {
     //---------- grab contents form HTML
     const grid = document.querySelector('.grid')
+    const navBtn = document.querySelector('.menu-logo')
     const nav = document.querySelector('nav')
     const playersHighlight = document.querySelectorAll('.score-board p')
     const xScoreText = document.querySelector('#x-score')
@@ -12,7 +13,6 @@ function init() {
     const resetBtn = document.querySelector('#clear-score')
     const messageBoard = document.querySelector('.message-board')
     const messageText = document.querySelector('.message')
-    ////🎁🐱‍👤✨🤷‍♂️🐱‍🚀🐱‍💻👌😒☠👻💀🎆🧧🎡🎰🎮🕹
     //---------------- 
     //-----Big board
     const collection = []
@@ -170,14 +170,14 @@ function init() {
     function getWildCard() {
         let result
         function drawACard() {
-            const index = Math.floor(Math.random() * 11) + 1
+            const index = Math.floor(Math.random() * 7) + 1
             if (index % 3 == 0)
                 return [extraRoundCard, 'Extra turn']
             if (index % 5 == 0)
                 return [overwriteCard, 'Overwrite']
             // if (index % 7 == 0)
             //     return [swapCard, 'Swap a card']
-            if (index % 11 == 0)
+            if (index % 7 == 0)
                 return [switchCard, 'Swap all cards']
             return [emptyCard, 'Empty 👽']
 
@@ -424,14 +424,7 @@ function init() {
 
     //-----------delay ai choices
     function newWait() {
-        const waitCounter = setInterval(makePick, 1000)
-        function makePick() {
-            clearInterval(waitCounter)
-            cpuMakeChoice()
-        }
-    }
-    function wait(func, num = 1000) {
-        waitConst = setInterval(func, num)
+        setTimeout(cpuMakeChoice, 1000)
     }
 
     ///---------running the game
@@ -613,7 +606,7 @@ function init() {
         });
         return [avail, playerChoice, cpuChoices]
     }
-    function message(txt, sec) {
+    function message(txt) {
         messageText.textContent = txt
         messageBoard.classList.remove('hidden')
     }
@@ -731,18 +724,17 @@ function init() {
     function lot() {
         if (Math.floor(Math.random() * Math.random() * 1000) % 2) {
             playerXturn = true
-            message(`Player ${playerXMark} goes first`, 1500)
+            message(`Player ${playerXMark} goes first`)
         } else {
             playerXturn = false
-            message(`Player ${playerOMark} goes first`, 1500)
+            message(`Player ${playerOMark} goes first`)
         }
-        const msgTimer = setInterval(hideMsg, 1000)
-        function hideMsg() {
-            clearInterval(msgTimer)
-            messageBoard.classList.add('hidden')
-        }
+        setTimeout(() => { messageBoard.classList.add('hidden') }, 1500)
     }
-
+    //--------------- close open sidebar
+    function closeSidebar() {
+        nav.classList.toggle('close')
+    }
     //--------------- events listener
     creatGrid()
     creatGridBig()
@@ -756,6 +748,7 @@ function init() {
     })
     cardsToUse.forEach(card => { card.addEventListener('click', useCard) })
     resetBtn.addEventListener('click', resetScore)
+    navBtn.addEventListener('click', closeSidebar)
 
 }
 window.addEventListener('DOMContentLoaded', init)
