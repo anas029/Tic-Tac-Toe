@@ -11,7 +11,7 @@
 body {
     background: linear-gradient(-45deg, #3f556e, #391757, #181620, #000000);
     background-size: 400% 400%;
-    /* animation: gradient 15s ease infinite; */
+    animation: gradient 15s ease infinite;
 
     min-height: 100vh;
     display: flex;
